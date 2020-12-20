@@ -53,55 +53,55 @@ int main()
 
 
         // alloting each square to each slot
-        a[1].x1=100;
-        a[1].y1=100;
-        a[1].x2=200;
-        a[1].y2=200;
+        a[0].x1=100;
+        a[0].y1=100;
+        a[0].x2=200;
+        a[0].y2=200;
 
-        a[2].x1=100;
+        a[1].x1=100;
+        a[1].y1=300;
+        a[1].x2=200;
+        a[1].y2=400;
+
+        a[2].x1=200;
         a[2].y1=300;
-        a[2].x2=200;
+        a[2].x2=300;
         a[2].y2=400;
 
         a[3].x1=200;
-        a[3].y1=300;
+        a[3].y1=100;
         a[3].x2=300;
-        a[3].y2=400;
+        a[3].y2=200;
 
-        a[4].x1=200;
+        a[4].x1=300;
         a[4].y1=100;
-        a[4].x2=300;
+        a[4].x2=400;
         a[4].y2=200;
 
         a[5].x1=300;
-        a[5].y1=100;
+        a[5].y1=300;
         a[5].x2=400;
-        a[5].y2=200;
+        a[5].y2=400;
 
-        a[6].x1=300;
+        a[6].x1=400;
         a[6].y1=300;
-        a[6].x2=400;
+        a[6].x2=500;
         a[6].y2=400;
 
         a[7].x1=400;
-        a[7].y1=300;
+        a[7].y1=100;
         a[7].x2=500;
-        a[7].y2=400;
+        a[7].y2=200;
 
-        a[8].x1=400;
+        a[8].x1=500;
         a[8].y1=100;
-        a[8].x2=500;
+        a[8].x2=600;
         a[8].y2=200;
 
         a[9].x1=500;
-        a[9].y1=100;
+        a[9].y1=300;
         a[9].x2=600;
-        a[9].y2=200;
-
-        a[10].x1=500;
-        a[10].y1=300;
-        a[10].x2=600;
-        a[10].y2=400;
+        a[9].y2=400;
 
     //Initialise Slot to 0
         for(i=1;i<11;i++)
@@ -181,8 +181,9 @@ int main()
             line(400,300,400,400);
             line(500,300,500,400);
 
-            for(i=1;i<11;i++)
+            for(i=0;i<10;i++)
             {
+               // printf("%d",a[i].slot);
                 if(a[i].slot==0)
                 {
                     setcolor(WHITE);
@@ -199,7 +200,7 @@ int main()
                 }
             }
             //closegraph();
-            contn
+            //contn
             //break;
             }
 
@@ -272,6 +273,8 @@ int main()
                 printf("\t\t\     NAME     : %s                          \n",a[i].name);
                 printf("\t\t\     SLOT NO. : %d                                \n",i+1);
                 printf("\t\t\     CHARGES  : 40/- per hour                         \n");
+                printf("\t\t\     Entry Time  : %s ",a[i].t1);
+                printf("\t\t\     Exit Time   : %s \n",a[i].t2);
                 printf("\t\t\                                                      \n");
                 printf("\t\t\xb0                                               \xb0\n");
                 printf("\t\t\xb0                                               \xb0\n");
@@ -319,7 +322,8 @@ int main()
             if(strcmp(User,"HPD_Parking")==0 && strcmp(Pass,"simple_parking")==0)
             {
                 system("cls");
-                printf("Welcome to Vehicle History");
+
+               printf("\n\t\tCheck the History in the file named Vehicle_d\n\n");
             }
 
             else
